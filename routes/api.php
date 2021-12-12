@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('pengguna/login', [PenggunaController::class, 'loginPengguna']);
 Route::post('pengguna/register', [PenggunaController::class, 'registerPengguna']);
 Route::get('pengguna/{id}', [PenggunaController::class, 'getPenggunaById']);
+
+Route::get('video/bereksperimen', [VideoController::class, 'getVideoBereksperimenYuk']);
+Route::get('video/tahukahkamu', [VideoController::class, 'getVideoTahukahKamu']);
+Route::get('video/tipstrik', [VideoController::class, 'getVideoTipsTrik']);
